@@ -1,0 +1,147 @@
+{
+    "usuarios": [
+        {
+            "nome": "caio",
+            "email": "caiomorhaes@gmail.com",
+            "senha": "310308",
+            "livros_alugados": []
+        },
+        {
+            "nome": "usuario",
+            "email": "usuario@gmail.com",
+            "senha": "senhauau",
+            "livros_alugados": []
+        },
+        {
+            "nome": "teste",
+            "email": "1",
+            "senha": "2",
+            "livros_alugados": [
+                {
+                    "id": 7304,
+                    "nome": "Inteligência Emocional",
+                    "data_aluguel": "10/02/2026",
+                    "data_devolucao": "17/02/2026"
+                },
+                {
+                    "id": 9017,
+                    "nome": "A Cigarra e a Formiga",
+                    "data_aluguel": "10/02/2026",
+                    "data_devolucao": "17/02/2026"
+                }
+            ]
+        },
+        {
+            "nome": "laura",
+            "email": "laura31@ymail.com",
+            "senha": "2008",
+            "livros_alugados": []
+        }
+    ],
+    "livros": [
+        {
+            "id": 4827,
+            "nome": "Applications of Artificial Intelligence in Academic Libraries.",
+            "autor": "Vijayakumar, S and Sheshadri, K.N.",
+            "genero": "Tecnologia",
+            "publicação": "16/05/2019",
+            "acessos": 0
+        },
+        {
+            "id": 7391,
+            "nome": "Data science in data librarianship: Core competencies of a data librarian.",
+            "autor": "Semeler, A. R. and Pinto, A. L.",
+            "genero": "Ciencia",
+            "publicação": "26/11/2019",
+            "acessos": 0
+        },
+        {
+            "id": 1564,
+            "nome": "Descobrindo crianças: A abordagem gestáltica com crianças e adolescentes.",
+            "autor": "Violet Oaklander",
+            "genero": "Psicologia",
+            "publicação": "1978",
+            "acessos": 0
+        },
+        {
+            "id": 9042,
+            "nome": "Anne de Green Gables",
+            "autor": "Lucy Maud Montgomery",
+            "genero": "Psicologia",
+            "publicação": "1908",
+            "acessos": 0
+        },
+        {
+            "id": 2718,
+            "nome": "O Pequeno Príncipe",
+            "autor": "Antoine de Saint-Exupéry",
+            "genero": "Fabula",
+            "publicação": "1943",
+            "acessos": 0
+        },
+        {
+            "id": 6185,
+            "nome": "Código Limpo",
+            "autor": "Robert C. Martin",
+            "genero": "Tecnologia",
+            "publicação": "2008",
+            "acessos": 0
+        },
+        {
+            "id": 8450,
+            "nome": "O Programador Pragmático",
+            "autor": "Andrew Hunt e David Thomas",
+            "genero": "Tecnologia",
+            "publicação": "1999",
+            "acessos": 0
+        },
+        {
+            "id": 3926,
+            "nome": "Uma Breve História do Tempo",
+            "autor": "Stephen Hawking",
+            "genero": "Ciencia",
+            "publicação": "1988",
+            "acessos": 0
+        },
+        {
+            "id": 5579,
+            "nome": "Cosmos",
+            "autor": "Carl Sagan",
+            "genero": "Ciencia",
+            "publicação": "1980",
+            "acessos": 0
+        },
+        {
+            "id": 1648,
+            "nome": "Rápido e Devagar",
+            "autor": "Daniel Kahneman",
+            "genero": "Psicologia",
+            "publicação": "2011",
+            "acessos": 0
+        },
+        {
+            "id": 7304,
+            "nome": "Inteligência Emocional",
+            "autor": "Daniel Goleman",
+            "genero": "Psicologia",
+            "publicação": "1995",
+            "acessos": 3
+        },
+        {
+            "id": 2891,
+            "nome": "Fábulas",
+            "autor": "Esopo",
+            "genero": "Fabula",
+            "publicação": "-600",
+            "acessos": 0
+        },
+        {
+            "id": 9017,
+            "nome": "A Cigarra e a Formiga",
+            "autor": "Jean de La Fontaine",
+            "genero": "Fabula",
+            "publicação": "1668",
+            "acessos": 1
+        }
+    ]
+}
