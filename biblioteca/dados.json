@@ -36,6 +36,38 @@
             "email": "laura31@ymail.com",
             "senha": "2008",
             "livros_alugados": []
+        },
+        {
+            "nome": "Lais",
+            "email": "lais@gmail.com",
+            "senha": "25122007",
+            "livros_alugados": [
+                {
+                    "id": 2718,
+                    "nome": "O Pequeno Príncipe",
+                    "data_aluguel": "10/02/2026",
+                    "data_devolucao": "1/02/2026"
+                }
+            ]
+        },
+        {
+            "nome": "kitada",
+            "email": "kitada@gmail.com",
+            "senha": "26022007",
+            "livros_alugados": [
+                {
+                    "id": 3926,
+                    "nome": "Uma Breve História do Tempo",
+                    "data_aluguel": "11/02/2026",
+                    "data_devolucao": "18/02/2026"
+                },
+                {
+                    "id": 1564,
+                    "nome": "Descobrindo crianças: A abordagem gestáltica com crianças e adolescentes.",
+                    "data_aluguel": "11/02/2026",
+                    "data_devolucao": "18/02/2026"
+                }
+            ]
         }
     ],
     "livros": [
@@ -61,7 +93,7 @@
             "autor": "Violet Oaklander",
             "genero": "Psicologia",
             "publicação": "1978",
-            "acessos": 0
+            "acessos": 1
         },
         {
             "id": 9042,
@@ -77,7 +109,7 @@
             "autor": "Antoine de Saint-Exupéry",
             "genero": "Fabula",
             "publicação": "1943",
-            "acessos": 0
+            "acessos": 1
         },
         {
             "id": 6185,
@@ -101,7 +133,7 @@
             "autor": "Stephen Hawking",
             "genero": "Ciencia",
             "publicação": "1988",
-            "acessos": 0
+            "acessos": 1
         },
         {
             "id": 5579,
@@ -125,7 +157,7 @@
             "autor": "Daniel Goleman",
             "genero": "Psicologia",
             "publicação": "1995",
-            "acessos": 3
+            "acessos": 4
         },
         {
             "id": 2891,
