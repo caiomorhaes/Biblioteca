@@ -29,7 +29,7 @@ def cadastrar_usuario(nome, email, senha):
     for usuario in dados["usuarios"]:
         if usuario["email"] == email:
             print("Este Email já foi cadastrado!")
-            return
+            inicio()
     #criar novo usuario com nome email e senha
     novo_usuario = {
         "nome": nome,
@@ -41,6 +41,8 @@ def cadastrar_usuario(nome, email, senha):
     dados["usuarios"].append(novo_usuario)
     salvar_dados(dados)
     print("Usuário cadastrado com sucesso!")
+    inicio()
+
 
 #função para o login de contas ja existentes
 def login(email, senha):
@@ -49,8 +51,9 @@ def login(email, senha):
         if usuario["email"] == email and usuario["senha"] == senha:
             print(f'\nBem vindo(a) {usuario["nome"]}!')
             return i  # RETORNA O ÍNDICE
+    print()
     print("Email ou senha incorretos.")
-    return None
+    inicio()
 
 #filtros de gramatica (sem destruir o codigo kekekekskssk)
 ROTULOS = {
@@ -155,8 +158,10 @@ def inicio():
     print('\n1 - Cadastrar')
     print('2 - Login')
     print('3 - Sair')
+    print()
 
     opção = input("Escolha: ")
+    print()
 
     #opção 1 para cadastrar
     if opção == "1":
@@ -189,6 +194,7 @@ def menu_principal(indice_usuario):
         print('4 - Sair')
 
         opção = input("Escolha: ")
+        print()
 
         if opção == "1":
             menu_filtro(indice_usuario)
@@ -205,7 +211,7 @@ def menu_principal(indice_usuario):
                     print('-' * 40)
 
         elif opção == "3":
-            print("Área de pagamentos ainda não implementada.")
+            pagamentos(usuario)
 
         elif opção == "4":
             print("\nObrigado por utilizar o programa!")
@@ -223,6 +229,7 @@ def menu_filtro(indice_usuario):
         print("5 - Voltar")
 
         opcao = input("Escolha: ")
+        print()
 
         if opcao == "1":
             selecionar_livro(dados, indice_usuario)
@@ -238,5 +245,61 @@ def menu_filtro(indice_usuario):
 
         elif opcao == "5":
             break
+
+#pagamentos
+def pagamentos(usuario):
+    while True:
+        print("\nBem vindo a página de pagamentos")
+        print("1 - Visualizar seus o prazo de seus livros")
+        print("2 - Pagar livros")
+        print("3 - Voltar ao menu")
+        opção3 = input("\n Escolha: ")
+        print()
+        if opção3 == "1":
+
+            if not usuario.get("livros_alugados"):
+                print ("\n Você não possui livros alugados.")
+                break
+            else:
+                hoje = datetime.now()
+
+                for livro in usuario["livros_alugados"]:
+                    data_dev = datetime.strptime(livro["data_devolucao"], "%d/%m/%Y")
+                    print (f'Livro: {livro["nome"]}')
+                    print (f'Data de devolução: {livro["data_devolucao"]}')
+
+        if opção3 == "2":
+            hoje = datetime.now()
+
+            for livro in usuario["livros_alugados"]:
+                data_dev = datetime.strptime(livro["data_devolucao"], "%d/%m/%Y")
+                if hoje>= data_dev:
+                    print()
+                    dias_atraso = (hoje - data_dev).days
+                    print(f'ATRASO de {dias_atraso} dia(s)')
+                    if dias_atraso <= 3:
+                        multa = (dias_atraso * 10) + 20
+                        print (f'Você foi MULTADO em {multa}R$')
+                        print()
+                    elif (dias_atraso > 3) and (dias_atraso <= 6):
+                        multa = (dias_atraso * 15) + 20
+                        print (f'Você foi MULTADO em {multa}R$')
+                        print()
+                    elif dias_atraso > 7:
+                        multa = (dias_atraso * 20) + 20
+                        print(f'Você foi MULTADO em {multa}R$')
+                        print()
+
+                else:
+                    dias_restantes = (data_dev - hoje).days
+                    print(f'Dentro do prazo ({dias_restantes} dia(s) restantes)')
+                    print(f'Se quiser devolver o livro, pagará só o preço fixo de 20R$')
+                    print()
+
+        if opção3 == "3":
+            break
+
+
+
 
 inicio()
